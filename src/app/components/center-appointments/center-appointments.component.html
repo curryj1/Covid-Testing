@@ -1,0 +1,49 @@
+<div>
+   
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let tempAppointment of appointments">
+                    <td>
+                        {{ tempAppointment.email.firstName}}
+                    </td>
+
+                    <td>
+                        {{ tempAppointment.email.lastName}}
+                    </td>
+                   
+    
+                    <td>
+                        {{ tempAppointment.date}}
+                    </td>
+    
+                    <td>
+                        {{ tempAppointment.time}}
+                    </td>
+    
+                    <td>
+                        {{tempAppointment.result}}
+                    </td>
+
+                    <td>
+                        {{tempAppointment.appointment_id}}
+                    </td>
+    
+                
+            </tr>
+            
+            
+    </table>
+    
+    </div> 
+    
+    <div>

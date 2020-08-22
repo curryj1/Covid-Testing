@@ -1,0 +1,50 @@
+<table class="table table-dark table-hover">
+  <thead>
+      <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+ 
+      </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let tempuser of users">
+              <td>
+                  {{ tempuser.firstName}}
+              </td>
+             
+
+              <td>
+                  {{ tempuser.lastName}}
+              </td>
+
+              <td>
+                  {{ tempuser.email}}
+              </td>
+
+              
+          
+      </tr>
+      
+      
+</table>
+
+
+<div>
+         
+    <li class="nav-item">
+        <a class="nav-link" routerLink="remote/add">Create Appointment for Patient</a>
+      </li>
+</div>
+
+<div>
+     
+    <li class="nav-item">
+        <a class="nav-link" routerLink="delete">Cancel Appointment for Patient</a>
+      </li>
+</div>
+
+<li class="nav-item">
+    <a class="nav-link" routerLink="center">List Appointment by Center</a>
+  </li>

@@ -1,0 +1,18 @@
+<label for="countries"> Choose a country</label>
+
+<select name= "countries" id="countries" [(ngModel)]="selectedValue" >
+    <option *ngFor="let opt of options" [value]=opt.ISO2>
+            {{opt.Country}}
+    </option>
+
+   
+</select>
+
+<div> <button id = "but" class="btn btn-primary btn-block" (click)="getByCountry(); reveal=true">Submit</button></div>
+
+<div *ngIf="!information" ><div *ngIf="reveal" >There are no cases for this country</div></div>
+<div *ngIf="reveal"> Active Cases: {{information[information.length-1].Active}} </div>
+<div *ngIf="reveal">Confirmed Cases: {{information[information.length-1].Confirmed}} </div>
+<div *ngIf="reveal">Recovered Cases: {{information[information.length-1].Recovered}} </div>
+<div *ngIf="reveal">Fatal Cases: {{information[information.length-1].Deaths}} </div>
+

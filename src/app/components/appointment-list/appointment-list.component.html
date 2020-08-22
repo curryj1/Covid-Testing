@@ -1,0 +1,71 @@
+<div>
+   
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Center Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Result</th>
+            <th>Appointment Id</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempAppointment of appointments">
+                <td>
+                    {{ tempAppointment.center.name}}
+                </td>
+               
+
+                <td>
+                    {{ tempAppointment.date}}
+                </td>
+
+                <td>
+                    {{ tempAppointment.time}}
+                </td>
+
+                <td>
+                    {{tempAppointment.result}}
+                </td>
+
+                <td>
+                    {{tempAppointment.appointment_id}}
+                </td>
+
+            
+        </tr>
+        
+        
+</table>
+
+</div> 
+
+<div>
+    
+    <li class="nav-item">
+        <a class="nav-link" routerLink="register">Create Appointment</a>
+      </li>
+  
+</div>
+
+<div>
+     
+    
+    <li class="nav-item">
+        <a class="nav-link" routerLink="delete">Delete an Appointment</a>
+      </li>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
