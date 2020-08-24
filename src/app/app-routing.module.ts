@@ -21,11 +21,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { BoardAdminComponent } from './components/board-admin/board-admin.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-import {DeleteEmployeeComponent} from './components/delete-employee/delete-employee.component';
-
-
+import { DeleteEmployeeComponent } from './components/delete-employee/delete-employee.component';
+import { UpdateAppointmentComponent } from './components/update-appointment/update-appointment.component';
 
 const routes: Routes = [
+  { path: 'mod/update', component: UpdateAppointmentComponent },
   { path: 'appointment', component: AppointmentListComponent },
   { path: 'appointment/register', component: AppointmentRegisterComponent },
   { path: 'admin', component: BoardAdminComponent },
@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'mod/delete', component: DeleteAppointmentComponent },
   { path: 'appointment/delete', component: DeleteAppointmentComponent },
   { path: 'admin/center/delete', component: DeleteCenterComponent },
-  {path: 'manager/delete', component:DeleteEmployeeComponent},
+  { path: 'manager/delete', component: DeleteEmployeeComponent },
   { path: 'manager/employees', component: EmployeeListComponent },
   { path: 'login/employee', component: EmployeeLoginComponent },
   { path: 'manager/register', component: EmployeeRegisterComponent },
@@ -49,11 +49,11 @@ const routes: Routes = [
   { path: 'manager', component: BoardManagerComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: 'index', pathMatch: 'full' }
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), CommonModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

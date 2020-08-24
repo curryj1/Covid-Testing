@@ -1,0 +1,53 @@
+<div>
+  <div class="col-md-12">
+    <div class="card card-container">
+      <img
+        id="profile-img"
+        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        class="profile-img-card"
+      />
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="name">Appointment Id</label>
+          <input
+            type="number"
+            class="form-control"
+            name="name"
+            [(ngModel)]="form.id"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Result</label>
+          <input
+            type="text"
+            class="form-control"
+            name="number"
+            [(ngModel)]="form.result"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" (click)="onSubmit()">
+            Update
+          </button>
+        </div>
+
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Update failed!<br />{{ errorMessage }}
+        </div>
+
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          Your update is successful!
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -28,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DeleteEmployeeComponent } from './components/delete-employee/delete-employee.component';
+import { UpdateAppointmentComponent } from './components/update-appointment/update-appointment.component';
 
 
 
@@ -49,7 +50,7 @@ import { DeleteEmployeeComponent } from './components/delete-employee/delete-emp
     DeleteAppointmentComponent,
     CreateManagerComponent,
     EmployeeListComponent, 
-    BoardManagerComponent, CovidComponent, DeleteCenterComponent, UpdateCenterComponent, RemoteAppointmentComponent, DeleteEmployeeComponent
+    BoardManagerComponent, CovidComponent, DeleteCenterComponent, UpdateCenterComponent, RemoteAppointmentComponent, DeleteEmployeeComponent, UpdateAppointmentComponent
   ],
   imports: [
     BrowserModule,
