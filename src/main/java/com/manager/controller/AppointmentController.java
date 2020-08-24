@@ -93,13 +93,15 @@ public class AppointmentController {
 
 		Appointment app = service.getAppointment(id).orElse(new Appointment());
 
+		if (a.getEmail() == null)
+			a.setEmail(app.getEmail());
 		if (a.getCenter() == null)
 			a.setCenter(app.getCenter());
 		if (a.getDate() == null)
 			a.setDate(app.getDate());
 		if (a.getTime() == null)
 			a.setTime(app.getTime());
-		if (a.getResult() == null)
+		if (a.getResult() == Result.None)
 			a.setResult(app.getResult());
 
 		service.UpdateAppointment(a);
